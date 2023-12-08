@@ -1,11 +1,11 @@
-const form = document.querySelector('.formAddAnimal');
-console.log(form);
-if (form) {
-  form.addEventListener('submit', async (e) => {
+const formReg = document.querySelector('.Registration');
+console.log(formReg);
+if (formReg) {
+  formReg.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const { name, img, description } = e.target;
+    const { name } = e.target;
     try {
-      const res = await fetch('/users', {
+      const res = await fetch('/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -15,13 +15,13 @@ if (form) {
         }),
       });
       const data = await res.json();
+      console.log(data);
       if (data.message === 'success') {
-        form.reset();
-        
+        formReg.reset();
+        window.location.href = '/theme';
       }
     } catch ({ message }) {
       console.log(message);
     }
   });
 }
-

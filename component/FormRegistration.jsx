@@ -4,7 +4,7 @@ const Layout = require("./Layout");
 function Registration (){
   return (
     <Layout>
-    <form className='Registration' style={{
+    <form  action="/theme" method="POST" className='Registration' style={{
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',

@@ -1,11 +1,16 @@
-const React = require("react");
+const React = require('react');
 
-function Header({ user, score }) {
-    return (
-      <div style={{display: 'flex', justifyContent: 'space-evenly'}}>
-        <div>Пользователь: {user}</div>
-        <div>Очки: {score}</div>
-      </div>
-    );
-  }
-  module.exports = Header;
+function Header({ user }) {
+  console.log(user);
+  return (
+    <div>
+      {user && (
+        <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
+          <div>Пользователь: {user.name}</div>
+          <div>Очки: {user.score}</div>
+        </div>
+      )}
+    </div>
+  );
+}
+module.exports = Header;
