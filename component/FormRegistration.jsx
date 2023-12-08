@@ -3,8 +3,13 @@ const Layout = require("./Layout");
 
 function Registration (){
   return (
-    <Layout title={'Регистрация'}>
-    <form className='Registration'>
+    <Layout>
+    <form className='Registration' style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '100vh',
+        }}>
       <input type='text' name='name' />
       <button type='submit'>Войти</button>
     </form>
