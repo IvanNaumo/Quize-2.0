@@ -1,6 +1,6 @@
 const React = require("react");
 
- function Layout({ title, children }) {
+ function Layout({ title, children , user }) {
   return (
     <html lang="ru">
       <head>
