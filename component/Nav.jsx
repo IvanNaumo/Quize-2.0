@@ -3,7 +3,7 @@ const React = require('react');
 function Header({ user }) {
   console.log(user);
   return (
-    <div>
+    <div className='header'>
       {user && (
         <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
           <div>Пользователь: {user.name}</div>

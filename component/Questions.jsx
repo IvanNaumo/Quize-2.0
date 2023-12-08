@@ -16,16 +16,15 @@ function Questions({ question, index, user }) {
         </div>
         <form action="" method="POST" className="form-answer" data-id={question.id}>
           <div className="mb-3 parent">
-            <label htmlFor="exampleInputPassword1" className="form-label" style={{ color: "#ffc107" }}>
+            <label htmlFor="exampleInputPassword1" className="form-label" style={{ color: "black" }}>
               Введите ответ
             </label>
             <input
               type="text"
-              className="form-control"
               id="exampleInputPassword1"
               name="answer"
             />
-            <button type="submit" className="btn buttonAuth btn-outline-warning">
+            <button type="submit" className="btn">
               Ответить
             </button>
           </div>
