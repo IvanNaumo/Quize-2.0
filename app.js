@@ -17,7 +17,7 @@ app.use(ssr);
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true })); //даем разрешение на чтение данных из body из формы
-app.use(express.static(path.join(__dirname, './public'))); // для обслуживания статических файлов css
+// для обслуживания статических файлов css
 
 app.use('/', indexRouter);
 

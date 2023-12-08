@@ -1,4 +1,5 @@
 const React = require("react");
+const Header = require('./Nav');
 
  function Layout({ title, children , user }) {
   return (
@@ -12,8 +13,9 @@ const React = require("react");
           crossOrigin="anonymous"
         />
         {/* <link rel="stylesheet" href="/style/style.css" /> */}
-        {/* <script defer src="/js/script.js" /> */}
+        <script defer src="/scripts/addUsers.js" />
       </head>
+      <Header user={user} />
       <body>{children}</body>
     </html>
   );

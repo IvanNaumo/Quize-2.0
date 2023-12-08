@@ -1,5 +1,6 @@
 const React = require("react");
 function Item({ theme }) {
+  // console.log(theme);
   return (
     <div style={{width: "35rem"}}>
       <img src={theme.img}  alt="..." />

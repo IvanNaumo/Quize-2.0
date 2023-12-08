@@ -12,13 +12,15 @@ const Themes = require('../component/Theme');
 router.get('/', async (req, res) => {
   try {
     const themes = await Theme.findAll();
-    console.log(themes);
-
+    // console.log(themes);
+    const { user } = res.app.locals;
+    // console.log(user,'kdufskfhwfhwofhwelf');
     const html = res.renderComponent(Themes, {
       title: 'Theme',
       themes,
+      user,
     });
-    console.log(html);
+    // console.log(html, '-----------------------------------------------');
 
     res.status(200).send(html);
   } catch ({ message }) {
