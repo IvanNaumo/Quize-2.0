@@ -1,20 +1,25 @@
 const Questions = require('../../component/Questions');
 const { Question, User } = require('../../db/models');
 
+console.log(Question, User, " !!!!!!!!!!!!!!!!!!!!!!!!!1");
+
 const router = require('express').Router();
 
-router.get('/:index/themes/:themesId', async (req, res) => {
+router.get('/:index/theme/:themesId', async (req, res) => {
   try {
     const { index, themesId } = req.params;
-    const questions = await Question.findAll({ where: { themeId: themesId } });
+
+    console.log(req.params, '&&&&&&&&&&&&&&&&&&&&&&&&&&&&');
+    const questions = await Question.findAll({ where: { themeId: +themesId } });
+    console.log(questions, '%%%%%%%%%%%%%');
     if (questions[index]) {
-      const html = res.renderComponent(QuestionsPage, {
+      const html = res.renderComponent(Questions, {
         question: questions[index],
         index: Number(index) + 1,
       });
       res.send(html);
     } else {
-      res.redirect('/themes');
+      res.redirect('/theme');
     }
   } catch (error) {
     console.log(error.message);
@@ -41,3 +46,6 @@ router.post("/", async (req, res) => {
       console.log(message.message);
     }
   });
+
+
+  module.exports = router

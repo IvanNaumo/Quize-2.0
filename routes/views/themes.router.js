@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-const { Theme } = require('../db/models');
-const Themes = require('../component/Theme');
+const { Theme } = require('../../db/models');
+const Themes = require('../../component/Theme');
 
 // router.get('/', async (req, res) => {
 //   const users = await Theme.findAll();
