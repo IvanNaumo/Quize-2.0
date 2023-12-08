@@ -1,5 +1,5 @@
 const React = require("react");
-const Layout = require("../Layout");
+const Layout = require("./Layout");
 
 function Questions({ question, index, user }) {
     return (
@@ -32,7 +32,7 @@ function Questions({ question, index, user }) {
         </form>
         <div className="answer"></div>
         <a
-          href={`/questions/${index}/themes/${question.themeId}`}
+          href={`/questions/${index}/theme/${question.themeId}`}
           className="btn btn-next btn-outline-warning"
         >
           Следующий вопрос

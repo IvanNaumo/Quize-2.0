@@ -14,6 +14,8 @@ const Header = require('./Nav');
         />
         {/* <link rel="stylesheet" href="/style/style.css" /> */}
         <script defer src="/scripts/addUsers.js" />
+        <script defer src="/scripts/next.js" />
+
       </head>
       <Header user={user} />
       <body>{children}</body>

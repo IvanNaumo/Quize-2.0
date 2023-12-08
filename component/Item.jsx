@@ -6,7 +6,7 @@ function Item({ theme }) {
       <img src={theme.img}  alt="..." />
       <div>
         <h5>{theme.name}</h5>
-        <a href={`/questions/0/themes/${theme.id}`}>
+        <a href={`/questions/0/theme/${theme.id}`}>
           Выбрать
         </a>
       </div>
