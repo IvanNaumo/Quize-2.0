@@ -11,7 +11,7 @@ function Registration (){
           height: '100vh',
         }}>
       <input type='text' name='name' />
-      <button type='submit'>Войти</button>
+      <button className='btn' type='submit'>Войти</button>
     </form>
     </Layout>
   );
