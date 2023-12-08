@@ -1,7 +1,7 @@
 const router = require("express").Router();
-const questionsRouter = require("./views/questions.routes");
-const authRouter = require("./auth.route");
-const themesRouter = require("./themes.route")
+const questionsRouter = require("./views/questions.router");
+const authRouter = require("./views/auth.router");
+const themesRouter = require("./themes.router")
 
 
 

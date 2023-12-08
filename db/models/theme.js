@@ -17,14 +17,14 @@ module.exports = (sequelize, DataTypes) => {
   Theme.init({
     name: {
       allowNull: false,
-      type: DataType.TEXT
+      type: DataTypes.TEXT
     },
     img: {
       allowNull: false,
-      type: DataType.TEXT
+      type: DataTypes.TEXT
     },
     userId: {
-      type: DataType.INTEGER,
+      type: DataTypes.INTEGER,
       references: {
         model: 'Users',
         key: 'id',
